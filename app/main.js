@@ -37,13 +37,13 @@ function addStar() {
   const material = new THREE.MeshStandardMaterial( {color: 0xffffff})
   const star = new THREE.Mesh( geometry, material);
 
-  const [x,y,z] = Array(3).fill().map(() => THREE.MathUtils.randFloatSpread(100));
+  const [x,y,z] = Array(3).fill().map(() => THREE.MathUtils.randFloatSpread(500));
 
   star.position.set(x,y,z);
   sceen.add(star)
 }
 
-Array(200).fill().forEach(addStar)
+Array(100).fill().forEach(addStar)
 
 const spaceTexture = new THREE.TextureLoader().load('space.jpg');
 sceen.background = spaceTexture;
